@@ -15,7 +15,7 @@ if err != nil {
 }
 var squareNum int
 
-b := &backoff.Backoff{
+b := &jaen.Backoff{
     MaxTime: 10 * time.Second,
 	MinTime: 100 * time.Millisecond,
 }
