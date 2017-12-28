@@ -1,12 +1,14 @@
-How to Install
+# Backoff
+
+### How to Install
 go get -v github.com/robertotambunan/backoff
 
-Usage
+### Usage
 Backoff will provide you time.Duration to repeat your action. When we have case like connecting to database, or getting data from database, we will get error when something bad happen, such as bad internet network, server issues, etc. All we need is something that can make us retry the action. Trying is always good, don't give up with only trying once.
 
 
-Example:
-
+### Example:
+```
 stmtOut, err := db.Prepare("SELECT squareNumber FROM squarenum WHERE number = ?")
 if err != nil {
 	panic(err.Error())
@@ -31,3 +33,4 @@ for{
         break; //break the loop
     }
 }
+```
